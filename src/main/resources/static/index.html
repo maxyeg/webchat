@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web chat</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/webchat.css" rel="stylesheet">
+    <script src="/webjars/angularjs/angular.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+<body ng-app="webchatApp">
+    <noscript>
+        <h2 style="color: #ff0000">
+            Seems your browser doesn't support Javascript!
+            Websocket relies on Javascript being enabled.
+            Please enable Javascript and reload this page!
+        </h2>
+    </noscript>
+    <ng-view></ng-view>
+</body>
+</html>
