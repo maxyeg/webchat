@@ -9,11 +9,13 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class ChatHistoryControllerTest {
 
+    private static final String USER = "test_user";
+
     @Mock
     private ChatHistoryController chatHistoryController;
 
     @Test
     public void testGetChatHistoryForUser() {
-        chatHistoryController.getChatHistoryForUser();
+        chatHistoryController.getChatHistoryForUser(USER);
     }
 }
