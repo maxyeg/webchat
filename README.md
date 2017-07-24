@@ -10,3 +10,5 @@ Messages will be shown below.
 Execute **./mvnw spring-boot:run**
 
 On Windows execute **mvnw.bat spring-boot:run**
+
+Application will be available under <a>http://localhost:8080</a> link.
