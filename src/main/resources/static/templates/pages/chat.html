@@ -22,6 +22,7 @@
                 </thead>
                 <tbody id="messages" ng-show="messages">
                 <tr ng-repeat="msg in messages">
+                    <td>{{msg.timestamp | date : 'short'}}</td>
                     <td>{{msg.fromUser}}</td>
                     <td>{{msg.message}}</td>
                     <td ng-show="msg.fromUser != name"><a ng-click="reply(msg.fromUser)">Reply</a></td>

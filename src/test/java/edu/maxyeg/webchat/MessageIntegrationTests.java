@@ -86,7 +86,7 @@ public class MessageIntegrationTests {
                     }
                 });
                 try {
-                    session.send("/app/" + USERNAME, new UserMessage("", TEST_MESSAGE));
+                    session.send("/app/" + USERNAME, new UserMessage("", TEST_MESSAGE, System.currentTimeMillis()));
                 } catch (Throwable t) {
                     failure.set(t);
                     latch.countDown();

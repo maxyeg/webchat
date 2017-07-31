@@ -17,4 +17,8 @@ public class UserMessage {
     @Setter
     private String message;
 
+    @Getter
+    @Setter
+    private long timestamp;
+
 }

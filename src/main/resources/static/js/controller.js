@@ -19,8 +19,9 @@
                 $scope.messages = $scope.messages || [];
                 $scope.name = $location.search().name;
                 $scope.sendMessage = function (toUser, message) {
-                    ChatService.sendMessage($scope.name, toUser, message);
-                    $scope.messages.push({'fromUser': $scope.name, 'message': message});
+                    var timestamp = Date.now();
+                    ChatService.sendMessage($scope.name, toUser, message, timestamp);
+                    $scope.messages.push({'fromUser': $scope.name, 'message': message, 'timestamp': timestamp});
                 };
                 $scope.$on(CONSTANTS.EVENTS.NEW_MESSAGE, function (event, args) {
                     $scope.messages.push(args);

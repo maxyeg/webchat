@@ -29,8 +29,12 @@
                     }
                     console.log("Disconnected");
                 },
-                sendMessage: function (fromUser, toUser, message) {
-                    stompClient.send("/app/" + toUser, {}, JSON.stringify({'fromUser': fromUser, 'message': message}));
+                sendMessage: function (fromUser, toUser, message, timestamp) {
+                    stompClient.send("/app/" + toUser, {}, JSON.stringify({
+                        'fromUser': fromUser,
+                        'message': message,
+                        'timestamp': timestamp
+                    }));
                 }
             };
         }]);
