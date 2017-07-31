@@ -27,9 +27,5 @@
                     $scope.messages.push(args);
                     $scope.$apply();
                 });
-                $scope.reply = function (receiver) {
-                    $scope.toUser = receiver;
-                    $scope.message = '';
-                };
             }]);
 })();
